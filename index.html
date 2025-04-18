@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniCanvas - 低代码平台</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --accent-color: #e74c3c;
+      --text-color: #333;
+      --light-bg: #f8f9fa;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    
+    .features {
+      padding: 80px 0;
+      background-color: var(--light-bg);
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    
+    .architecture {
+      padding: 80px 0;
+    }
+    
+    .architecture-diagram {
+      max-width: 100%;
+      height: auto;
+      margin-top: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    
+    .demo {
+      padding: 80px 0;
+      background-color: var(--light-bg);
+    }
+    
+    .demo-container {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .demo-header {
+      background: var(--primary-color);
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .demo-content {
+      padding: 20px;
+      min-height: 300px;
+    }
+    
+    .cta {
+      padding: 80px 0;
+      text-align: center;
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: white;
+    }
+    
+    footer {
+      padding: 40px 0;
+      background: #333;
+      color: white;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #333;">
+    <div class="container">
+      <a class="navbar-brand" href="#">UniCanvas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#features">特性</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#architecture">架构</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#demo">演示</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/yourusername/unicanvas" target="_blank">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="docs/index.html">文档</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>UniCanvas</h1>
+      <p>默认隔离，按需联通的低代码平台</p>
+      <div>
+        <a href="#demo" class="btn btn-light btn-lg me-3">查看演示</a>
+        <a href="https://github.com/yourusername/unicanvas" class="btn btn-outline-light btn-lg">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>核心特性</h2>
+        <p class="lead">UniCanvas 提供了一系列强大的功能，帮助您快速构建和管理多站点应用</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>全局资源中心</h3>
+            <p>集中管理样式变量、组件、脚本和数据模型，支持权限控制和资源继承。</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>沙箱通信网关</h3>
+            <p>安全地处理跨页面/站点通信，支持消息验证、来源检查和响应处理。</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3>智能模板引擎</h3>
+            <p>创建、保存和应用模板，自动适配不同环境，处理命名和样式冲突。</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">🛠️</div>
+            <h3>冲突检测系统</h3>
+            <p>自动检测和解决CSS选择器、JS变量和资源ID冲突，确保应用稳定性。</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <h3>事件系统</h3>
+            <p>灵活的事件机制，支持自定义监听器和事件触发，便于扩展和监控。</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">🏪</div>
+            <h3>模板市场</h3>
+            <p>发布、搜索和使用模板，促进组件复用和团队协作。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section class="architecture" id="architecture">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>系统架构</h2>
+        <p class="lead">UniCanvas 采用模块化设计，各组件协同工作，实现"默认隔离，按需联通"的核心理念</p>
+      </div>
+      
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h3>核心模块</h3>
+          <ul class="list-group mb-4">
+            <li class="list-group-item">GlobalResourceHub - 全局资源中心</li>
+            <li class="list-group-item">SandboxBridge - 沙箱通信网关</li>
+            <li class="list-group-item">SmartTemplateEngine - 智能模板引擎</li>
+            <li class="list-group-item">UniCanvas - 核心整合模块</li>
+          </ul>
+          
+          <h3>辅助系统</h3>
+          <ul class="list-group">
+            <li class="list-group-item">EventEmitter - 事件系统</li>
+            <li class="list-group-item">ConflictDetector - 冲突检测系统</li>
+            <li class="list-group-item">UniCanvasError - 错误处理机制</li>
+            <li class="list-group-item">TemplateMarket - 模板市场</li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-6">
+          <img src="assets/architecture-diagram.svg" alt="UniCanvas 架构图" class="architecture-diagram">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section class="demo" id="demo">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>交互演示</h2>
+        <p class="lead">体验 UniCanvas 的核心功能</p>
+      </div>
+      
+      <div class="demo-container">
+        <div class="demo-header">
+          <span>UniCanvas 演示</span>
+          <div>
+            <button class="btn btn-sm btn-outline-light">运行</button>
+            <button class="btn btn-sm btn-outline-light">重置</button>
+          </div>
+        </div>
+        
+        <div class="demo-content">
+          <div id="demo-app">
+            <!-- 演示内容将通过 JavaScript 加载 -->
+            <div class="text-center py-5">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <p class="mt-3">正在加载演示...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>开始使用 UniCanvas</h2>
+      <p class="lead mb-4">快速构建安全、可扩展的多站点应用</p>
+      <a href="https://github.com/yourusername/unicanvas" class="btn btn-light btn-lg">查看文档</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>UniCanvas</h4>
+          <p>一个开源的低代码平台，专注于多站点应用的安全通信和资源管理。</p>
+        </div>
+        
+        <div class="col-md-6 text-md-end">
+          <h4>链接</h4>
+          <div class="footer-links">
+            <a href="https://github.com/yourusername/unicanvas">GitHub</a>
+            <a href="docs/index.html">文档</a>
+            <a href="#features">特性</a>
+            <a href="#demo">演示</a>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="my-4">
+      
+      <div class="text-center">
+        <p>&copy; 2025 UniCanvas. 基于 MIT 许可证开源。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/unicanvas.min.js"></script>
+  <script>
+    // 演示初始化代码
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const demoApp = document.getElementById('demo-app');
+        
+        // 加载演示内容
+        demoApp.innerHTML = `
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-3">
+                <div class="card-header bg-primary text-white">站点 A</div>
+                <div class="card-body">
+                  <h5>仪表盘组件</h5>
+                  <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 75%">75%</div>
+                  </div>
+                  <button class="btn btn-sm btn-primary" id="send-data">发送数据到站点 B</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header bg-success text-white">站点 B</div>
+                <div class="card-body">
+                  <h5>数据展示</h5>
+                  <div id="site-b-data">等待数据...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <h5>通信日志</h5>
+            <div class="border p-3 bg-light" style="height: 150px; overflow-y: auto;" id="comm-log">
+              <div class="text-muted">等待通信...</div>
+            </div>
+          </div>
+        `;
+        
+        // 添加演示交互
+        const sendButton = document.getElementById('send-data');
+        const siteBData = document.getElementById('site-b-data');
+        const commLog = document.getElementById('comm-log');
+        
+        sendButton.addEventListener('click', () => {
+          // 记录发送日志
+          commLog.innerHTML += `<div>[${new Date().toLocaleTimeString()}] 站点 A 发送数据...</div>`;
+          
+          // 模拟通信延迟
+          setTimeout(() => {
+            // 更新站点 B 数据
+            siteBData.innerHTML = `
+              <div class="alert alert-success">
+                <strong>收到数据!</strong><br>
+                访问量: 2,000<br>
+                转化率: 12.5%
+              </div>
+            `;
+            
+            // 记录接收日志
+            commLog.innerHTML += `<div>[${new Date().toLocaleTimeString()}] 站点 B 接收到数据</div>`;
+            
+            // 自动滚动日志到底部
+            commLog.scrollTop = commLog.scrollHeight;
+          }, 800);
+        });
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
