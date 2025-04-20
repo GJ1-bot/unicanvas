@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: UniCanvas 讨论区
+    url: https://github.com/你的用户名/unicanvas/discussions
+    about: 如果您有问题或想法，请先在这里讨论
+  - name: UniCanvas 文档
+    url: https://你的用户名.github.io/unicanvas/
+    about: 在提问前请先查阅文档
