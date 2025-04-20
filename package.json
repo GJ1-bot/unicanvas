@@ -1,0 +1,26 @@
+{
+  "name": "unicanvas",
+  "version": "0.1.0",
+  "description": "一个灵活的画布库，支持模板和资源管理",
+  "main": "dist/unicanvas.js",
+  "module": "dist/unicanvas.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "keywords": ["canvas", "template", "javascript", "drawing"],
+  "author": "郭健 <3447314948@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GJ1-bot/unicanvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GJ1-bot/unicanvas/issues"
+  },
+  "homepage": "https://github.com/GJ1-bot/unicanvas#readme"
+}
